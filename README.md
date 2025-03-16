@@ -6,7 +6,7 @@
  -->
 
 ### 说明
-
+![GitHub repo size](https://img.shields.io/github/repo-size/Ti-FDGG/BIT-CS-2023)
 课程名称按照[计算机科学与技术 2023版培养方案](https://jxzxehallapp.bit.edu.cn/jwapp/sys/xsfacx/*default/index.do#/ckgrpyfa)的填写。
 
 ### 课程列表
