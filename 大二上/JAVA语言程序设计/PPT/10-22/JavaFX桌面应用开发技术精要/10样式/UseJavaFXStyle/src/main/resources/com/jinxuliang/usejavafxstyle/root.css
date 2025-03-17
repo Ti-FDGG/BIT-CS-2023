@@ -1,0 +1,13 @@
+.root {
+    -fx-font-size: 20;
+    -fx-cursor: hand;
+    -fx-spacing: 10;
+    -fx-padding: 20;
+    /*自定义一个look-up属性值*/
+    -my-button-color: red;
+}
+
+.button {
+    -fx-text-fill: -my-button-color;
+}
+

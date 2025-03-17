@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="200.0" prefWidth="371.0" xmlns="http://javafx.com/javafx/8.0.111"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.jinxuliang.multiwindowdemo.controllers.MainWindow2Controller">
+   <children>
+      <Label alignment="CENTER" layoutX="6.0" layoutY="67.0" text="新的内容"
+             AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="-6.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Button layoutX="287.0" layoutY="145.0" mnemonicParsing="false"
+              onAction="#goBack" text="关闭" />
+   </children>
+</AnchorPane>

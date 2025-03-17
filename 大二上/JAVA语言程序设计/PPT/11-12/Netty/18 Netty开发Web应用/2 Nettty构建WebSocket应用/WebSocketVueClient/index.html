@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebSocket客户端</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="vue/vue.global.js"></script>
+</head>
+<body class="container">
+<div id="app">
+    <h3 class="text-center m-2">基于WebSocket的网络聊天室</h3>
+    <hr>
+    <div class="row">
+        <label for="msgContent" class="form-label col-1">发送消息</label>
+        <div class="col-9">
+            <input v-model="msg" type="text" class="form-control" id="msgContent">
+        </div>
+
+        <button class="btn btn-primary col-2" @click="chat">点我发送</button>
+    </div>
+
+    <hr>
+    <div>
+        接收消息
+    </div>
+    <div id="receiveMsg" class="alert alert-info p-2 mt-2">
+
+        <p v-if="messages.length===0">暂时没有消息</p>
+        <div v-else>
+            <p v-for="msg of messages">
+                {{msg}}
+            </p>
+        </div>
+    </div>
+</div>
+<script>
+    let socket;
+    let app = Vue.createApp({
+        data() {
+            return {
+                msg: '',
+                messages: []
+            }
+        },
+        mounted() {
+            socket = new WebSocket("ws://127.0.0.1:8088/ws");
+            socket.onopen = function () {
+                console.log("onopen")
+            };
+            socket.onclose = function () {
+                console.log("onclose")
+            };
+            socket.onerror = function () {
+                console.log("onerror")
+            };
+            socket.onmessage = function (e) {
+                app.messages.push(e.data);
+            };
+        },
+        methods: {
+            chat() {
+                if(this.msg.length>0){
+                    socket.send(this.msg);
+                    this.msg = "";
+                }
+
+            }
+        }
+
+    }).mount("#app");
+</script>
+</body>
+</html>

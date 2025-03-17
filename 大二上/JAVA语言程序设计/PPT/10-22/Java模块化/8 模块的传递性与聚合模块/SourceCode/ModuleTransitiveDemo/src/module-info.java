@@ -1,0 +1,5 @@
+module ModuleTransitiveDemo {
+    requires ModuleB;
+}
+
+

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/ChatClientConsole/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ChatClientConsole/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ChatClientJavaFX/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ChatClientJavaFX/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ChatRoomLibray/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ChatRoomLibray/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ChatServerConsole/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ChatServerConsole/src/main/resources" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

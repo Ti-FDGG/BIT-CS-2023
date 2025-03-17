@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/agglib/agglib.iml" filepath="$PROJECT_DIR$/agglib/agglib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aggregate-modules.iml" filepath="$PROJECT_DIR$/aggregate-modules.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib1/lib1.iml" filepath="$PROJECT_DIR$/lib1/lib1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib2/lib2.iml" filepath="$PROJECT_DIR$/lib2/lib2.iml" />
+    </modules>
+  </component>
+</project>

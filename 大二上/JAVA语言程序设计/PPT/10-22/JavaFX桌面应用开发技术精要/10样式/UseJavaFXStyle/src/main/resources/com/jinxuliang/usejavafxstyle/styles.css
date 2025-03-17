@@ -1,0 +1,26 @@
+/*修改默认的按钮控件样式*/
+.button{
+    -fx-text-fill:white;
+    -fx-font-family:"Arial Narrow";
+    -fx-font-weight:bold;
+    -fx-background-color:linear-gradient(#61a2b1,#2A5058);
+    -fx-background-radius: 5;
+    -fx-font-size: 24px;
+}
+/*自定义控件样式*/
+.mybutton{
+    -fx-background-color: #2f4f4f;
+    -fx-alighment: center;
+    -fx-font:18px "Cooper Black";
+}
+/**id选择器**/
+#cir{
+    -fx-fill:  tan;
+}
+#title{
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: blue;
+}
+
+

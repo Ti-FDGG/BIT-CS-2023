@@ -1,0 +1,37 @@
+[
+  {
+    "name" : "com.sun.glass.ui.win.WinDnDClipboard"
+  }
+,
+  {
+    "name" : "com.sun.glass.ui.win.WinGestureSupport"
+  }
+,
+  {
+    "name" : "com.sun.glass.ui.win.WinPlatformFactory",
+    "methods":[{"name":"<init>","parameterTypes":[]}]
+  }
+,
+  {
+    "name" : "com.sun.javafx.font.directwrite.DWFactory",
+    "methods":[{"name":"getFactory","parameterTypes":[]}]
+  }
+,
+  {
+    "name" : "com.sun.prism.d3d.D3DPipeline",
+    "methods":[{"name":"getInstance","parameterTypes":[]}]
+  }
+,
+  {
+    "name" : "com.sun.prism.d3d.D3DResourceFactory"
+  }
+,
+  {
+    "name" : "com.sun.prism.d3d.D3DShader"
+  }
+,
+  {
+    "name" : "com.sun.scenario.effect.impl.hw.d3d.D3DShaderSource",
+    "methods":[{"name":"<init>","parameterTypes":[]}]
+  }
+]

@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="UdpConsoleClient:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/UdpConsoleClient_jar</output-path>
+    <root id="archive" name="UdpConsoleClient.jar">
+      <element id="module-output" name="UdpConsoleClient" />
+      <element id="module-output" name="PublicLibrary" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

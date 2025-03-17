@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import java.util.HashMap?>
+<?import java.lang.Double?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import com.jinxuliang.classinstance.model.MyTestClass?>
+<?import java.lang.Integer?>
+<?import com.jinxuliang.classinstance.model.MySingleton?>
+<?import javafx.scene.text.Font?>
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.jinxuliang.classinstance.MainController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+
+    <Label>
+        <font>
+            <Font size="20"/>
+        </font>
+        <textFill>
+            <!--使用Builder实例化Color对象-->
+            <Color red="1.0" green="0.0" blue="0.0"/>
+        </textFill>
+        <!-- 调用valueOf()方法-->
+        <Double fx:value="1.0"/>
+    </Label>
+
+    <Label>
+        <!--实例化自定义类型-->
+        <MyTestClass>
+            <info>
+                <!-- 调用valueOf()方法实例化对象-->
+                <String fx:value="info"/>
+            </info>
+            <num>
+                <Integer fx:value="100"/>
+            </num>
+        </MyTestClass>
+    </Label>
+    <Label>
+        <!--引用常量-->
+        <MyTestClass fx:constant="MAX_VALUE"/>
+    </Label>
+
+
+    <!--使用对象工厂实例化Signleton对象，会拥有相同的hashCode值-->
+    <Label>
+        <MySingleton fx:factory="getInstance"/>
+    </Label>
+    <Label>
+        <MySingleton fx:factory="getInstance"/>
+    </Label>
+    <Label>
+        <!-- 实例化Map-->
+        <HashMap foo="123" bar="456"/>
+    </Label>
+
+    <ListView>
+        <items>
+            <!-- 使用工厂方法实例化List-->
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="第一项"/>
+                <String fx:value="第二项"/>
+                <String fx:value="第三项"/>
+            </FXCollections>
+        </items>
+    </ListView>
+
+    <!--定义可重用的对象-->
+    <fx:define>
+        <Insets fx:id="padding" bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+        <Image url="@code.jpg" fx:id="myImg"/>
+        <ToggleGroup fx:id="myToggleGroup"/>
+    </fx:define>
+
+    <!--使用可重用的对象-->
+    <Label padding="$padding">
+        重用Padding值的Label
+    </Label>
+    <ImageView>
+        <fx:reference source="myImg"/>
+    </ImageView>
+
+    <RadioButton text="A" toggleGroup="$myToggleGroup"/>
+    <RadioButton text="B" toggleGroup="$myToggleGroup"/>
+    <RadioButton text="C" toggleGroup="$myToggleGroup"/>
+
+
+</VBox>

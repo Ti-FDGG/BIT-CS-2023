@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.text.TextFlow?>
+<?import javafx.scene.text.Text?>
+<?import com.jinxuliang.fxmlsetproperty.model.MyClass?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.control.TextField?>
+<VBox alignment="CENTER" spacing="20.0"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.jinxuliang.fxmlsetproperty.MainController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <!--在属性中使用常量-->
+    <alignment>
+        <!-- 使用JavaFX内置的常量-->
+        <Pos fx:constant="CENTER"/>
+    </alignment>
+    <Label style="-fx-font-weight: bold;-fx-font-size: 20">
+        <!--使用自定义类型中的常量-->
+        <MyClass fx:constant="MAX_VALUE"/>
+    </Label>
+
+    <!--使用@指定相对路径-->
+    <ImageView>
+        <Image url="@images/test.jpg"/>
+    </ImageView>
+
+
+    <!-- 使用静态属性-->
+    <GridPane>
+        <Label text=" (0,0) ">
+            <GridPane.rowIndex>0</GridPane.rowIndex>
+            <GridPane.columnIndex>0</GridPane.columnIndex>
+        </Label>
+        <Label text=" (0,1) ">
+            <!-- 使用静态属性-->
+            <GridPane.rowIndex>0</GridPane.rowIndex>
+            <GridPane.columnIndex>1</GridPane.columnIndex>
+        </Label>
+    </GridPane>
+
+    <TextField fx:id="textField"/>
+    <Label text="${textField.text}"/>
+
+
+    <!--引用放在默认资源包中的字符串-->
+    <Label text="%info"/>
+    <!--可以动态地设置要使用的语言-->
+    <Label text="%greetingText"/>
+
+</VBox>

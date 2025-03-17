@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/AnonymousInnerClassTest.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/LocalInnerClassTest.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/MemberInnerClassTest.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/StaticInnerClassTest.java" charset="UTF-8" />
+  </component>
+</project>

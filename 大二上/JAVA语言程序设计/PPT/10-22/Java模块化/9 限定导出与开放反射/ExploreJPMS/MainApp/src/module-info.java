@@ -1,0 +1,4 @@
+module MainApp {
+    requires PublicLib;
+}
+

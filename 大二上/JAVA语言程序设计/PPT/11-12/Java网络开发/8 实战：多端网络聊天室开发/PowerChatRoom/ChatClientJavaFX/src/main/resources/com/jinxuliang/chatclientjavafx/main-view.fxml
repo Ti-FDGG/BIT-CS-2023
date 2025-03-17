@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="505.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jinxuliang.chatclientjavafx.MainController">
+   <children>
+      <Button fx:id="btnSend" layoutX="531.0" layoutY="117.0" mnemonicParsing="false" text="发送" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="117.0" />
+      <Label layoutX="23.0" layoutY="73.0" text="聊天服务器IP地址" />
+      <TextField fx:id="txtIP" layoutX="167.0" layoutY="68.0" prefHeight="29.0" prefWidth="285.0" text="192.168.1.5" AnchorPane.leftAnchor="167.0" AnchorPane.rightAnchor="148.0" AnchorPane.topAnchor="68.0" />
+      <Label layoutX="23.0" layoutY="122.0" text="消息" />
+      <TextArea fx:id="txtMessage" layoutX="67.0" layoutY="117.0" prefHeight="80.0" prefWidth="449.0" AnchorPane.leftAnchor="67.0" AnchorPane.rightAnchor="86.0" />
+      <Button fx:id="btnConnect" layoutX="468.0" layoutY="68.0" mnemonicParsing="false" text="连接" AnchorPane.rightAnchor="86.0" AnchorPane.topAnchor="68.0" />
+      <Label fx:id="lblStatus" layoutX="4.0" layoutY="367.0" prefHeight="19.0" prefWidth="592.0" text="输入正确的服务器IP地址，然后点击“连接”按钮" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0">
+         <padding>
+            <Insets bottom="2.0" left="10.0" right="10.0" top="2.0" />
+         </padding>
+      </Label>
+      <TableView fx:id="tbMessage" layoutX="40.0" layoutY="214.0" prefHeight="251.0" prefWidth="544.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="31.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="214.0">
+        <columns>
+          <TableColumn fx:id="tcUser" prefWidth="150.0" text="网友" />
+          <TableColumn fx:id="tcMessage" minWidth="400.0" prefWidth="75.0" text="消息" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnQuit" layoutX="531.0" layoutY="68.0" mnemonicParsing="false" text="断开" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="68.0" />
+      <Label layoutX="23.0" layoutY="33.0" text="昵称" />
+      <TextField fx:id="txtUserName" layoutX="67.0" layoutY="28.0" prefHeight="29.0" prefWidth="447.0" AnchorPane.leftAnchor="67.0" AnchorPane.rightAnchor="86.0" AnchorPane.topAnchor="28.0" />
+      <Button fx:id="btnRename" layoutX="531.0" layoutY="28.0" mnemonicParsing="false" text="改名" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="28.0" />
+   </children>
+</AnchorPane>

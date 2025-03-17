@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="176.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jinxuliang.runlaterapp.MainController">
+   <children>
+      <Button fx:id="btnNewThread" layoutX="245.0" layoutY="29.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="117.0" text="启动新线程" />
+      <Label fx:id="lblInfo" layoutX="76.0" layoutY="104.0" prefHeight="58.0" prefWidth="442.0" text="lblInfo" textAlignment="CENTER" textFill="#0e77c3" wrapText="true">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

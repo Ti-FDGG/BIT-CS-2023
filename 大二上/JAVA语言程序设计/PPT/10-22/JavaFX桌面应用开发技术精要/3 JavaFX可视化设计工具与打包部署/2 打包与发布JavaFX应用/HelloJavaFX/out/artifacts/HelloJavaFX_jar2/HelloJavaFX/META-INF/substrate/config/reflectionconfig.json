@@ -1,0 +1,12 @@
+[
+  {
+    "name" : "javafx.fxml.FXMLLoader",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true
+  }
+]
+

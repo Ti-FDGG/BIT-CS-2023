@@ -1,0 +1,12 @@
+#clickMe{
+	-fx-font-size:30px;
+	-fx-background-color:rgba(255,255,255,.80) ;
+	-fx-text-fill:blue;
+	-fx-padding: 6 6 6 6;
+	-fx-border-radius: 8;
+	
+}
+
+.myClass{
+	-fx-font-weight:bold;
+}

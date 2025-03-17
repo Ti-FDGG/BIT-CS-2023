@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="201.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.jinxuliang.javafxdatabindingdemo.mynumber.MyNumberController">
+   <children>
+      <Label fx:id="lblStatus" alignment="CENTER" layoutX="1.0" layoutY="51.0" text="请单击下面的按钮" textAlignment="CENTER" AnchorPane.bottomAnchor="115.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-1.0">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Button layoutX="274.0" layoutY="121.0" mnemonicParsing="false" onAction="#ButtonClick" text="Click Me!" />
+   </children>
+</AnchorPane>

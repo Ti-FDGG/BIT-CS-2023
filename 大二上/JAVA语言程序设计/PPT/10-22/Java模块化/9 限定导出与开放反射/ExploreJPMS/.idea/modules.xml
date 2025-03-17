@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ExploreJPMS.iml" filepath="$PROJECT_DIR$/ExploreJPMS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MainApp/MainApp.iml" filepath="$PROJECT_DIR$/MainApp/MainApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PublicLib/PublicLib.iml" filepath="$PROJECT_DIR$/PublicLib/PublicLib.iml" />
+    </modules>
+  </component>
+</project>
