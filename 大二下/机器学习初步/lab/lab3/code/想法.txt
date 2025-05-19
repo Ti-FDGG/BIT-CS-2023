@@ -1,0 +1,17 @@
+TARGET_UPDATE_FREQUENCY的推荐设置？？
+
+Pytorch版本的添加Target Network后，训练消耗明显增大，运行速度变慢
+
+AutoDL会有一定概率碰到某些部分损坏的镜像
+
+之前碰到过GitHub学术加速损坏的
+
+刚刚又碰到一个ca-certificates损坏，直接用不了apt的
+（结果后来又好了不知道怎么回事）
+
+有中文的路径下，TensorFlow版本的不能正常保存模型
+
+source activate base
+
+export LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH # 将 Conda 的库路径添加到 LD_LIBRARY_PATH 环境变量中：
+export SDL_AUDIODRIVER=disk # 虚拟声卡

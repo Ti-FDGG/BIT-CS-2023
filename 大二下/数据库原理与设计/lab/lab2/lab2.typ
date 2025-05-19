@@ -1,4 +1,4 @@
-#import "template.typ": report-body, appendix
+#import "template-dblab.typ": report-body, appendix
 #import "@preview/cetz:0.3.4": canvas, draw, tree
 
 #show: doc => report-body(
@@ -52,22 +52,9 @@
 
 ==== 数据集说明
 
-由于实验没有提供统一的数据集，因此我使用 `Qwen 2.5 Max` AI生成了一些数据，并以 `.csv` 格式保存。每个表格的第一行是表头，每张表包含10条或11条数据。以下是 `supplier.csv` 的内容，作为示例。
+在乐学平台上提供了实验数据集的下载链接，点击下载即可。
 
-```csv
-supplier_id,supplier_name,address,nation_id,phone
-1,红魔馆后勤部,幻想乡红魔乡,1,001-12345678
-2,魔理沙的魔法商店,魔法之森深处,2,002-87654321
-3,河城荷取工业,迷途竹林入口,3,003-11223344
-4,妖梦的刀剑铺,冥界边境,4,004-55667788
-5,咲夜管家服务,天界南门,5,005-99887766
-6,地灵殿物资处,旧地狱核心区,6,006-13579246
-7,风祝的神社商店,博丽神社旁,8,007-24681357
-8,铃仙的月面物流,月之都环形山,10,008-36912587
-9,八云紫的隙间贸易,妖怪之山山脚,7,009-15935748
-10,火焰猫燐的怨灵回收站,旧地狱怨灵聚集地,6,010-75395168
-11,金仓集团,幻想乡仓库区,1,011-88888888
-```
+数据集包含了8个csv文件，分别对应于实验1中创建的8个表，文件名与表名一致，文件内定义的表结构也与实验1中定义的相符合。
 
 ==== 数据集导入
 
@@ -118,12 +105,12 @@ SHOW VARIABLES LIKE 'secure_file_priv';
 
 SQL语句的导入方式受到MySQL安全选项的限制，导入时还需要注意文件路径的问题，很不方便。而DataGrip不依赖 `LOAD DATA INFILE`，因此不受 `secure_file_priv` 的限制，可以从任意路径导入数据。
 
-例如，导入 `region.csv` 数据时，使用以下步骤：
+例如，导入 `region.csv` 数据时（这里实际导入的是`region_utf8.csv`，详见3.1.3），使用以下步骤：
 
 在DataGrip中，右键点击 `region` 表，选择 `导入/导出` — `从文件导入数据`。
 
 #figure(
-  image("fig/导入1.png", width: 50%),
+  image("fig/导入1.png", width: 70%),
   caption: [导入数据],
 )
 #text()[#h(0.0em)] // 用来使得块级元素后分段
@@ -131,12 +118,45 @@ SQL语句的导入方式受到MySQL安全选项的限制，导入时还需要注
 选择合适路径，点击`确定`。弹出`导入`窗口后，按照默认设置，点击`确定`，即可完成导入。
 
 #figure(
-  image("fig/导入4.png", width: 50%),
+  image("fig/导入4.png", width: 70%),
   caption: [导入成功],
 )
 #text()[#h(0.0em)] // 用来使得块级元素后分段
 
 其余数据通过同样方式按照顺序依次导入即可。
+
+==== 数据集修复以及重新导入
+
+===== 数据集字符编码更新
+
+数据集中`customer.csv`、`part.csv`、`nation.csv`、`region.csv`、`supplier.csv`五个文件创建时期比较早，其中的数据使用了 ANSI 编码，直接导入的话 MySQL 默认按 UTF-8 解读 CSV 文件，造成乱码问题。
+
+因此需要将这五个文件转换为 UTF-8 编码格式。可以使用文本编辑器打开文件，然后另存为 UTF-8 格式。或者，可以使用以下 bash 命令进行转换（若是在 Windows 系统中，可以先用命令行输入 `wsl` 以切换到 WSL 再进一步操作）：
+
+\
+
+```bash
+iconv -f gbk -t utf-8 region.csv > region_utf8.csv
+iconv -f gbk -t utf-8 nation.csv > nation_utf8.csv
+iconv -f gbk -t utf-8 customer.csv > customer_utf8.csv
+iconv -f gbk -t utf-8 part.csv > part_utf8.csv
+iconv -f gbk -t utf-8 supplier.csv > supplier_utf8.csv
+```
+
+===== 数据集数据标记格式修复
+
+在导入`order.csv`时，DataGrip将导入失败的日志记录在了系统临时文件的`order.txt`中。其中表明了`非标准日期格式`的错误，这造成了转换的失败。如：
+```text
+1:13: conversion failed: "2014/3/8" to date (order_date)
+```
+这是因为`2014/3/8`是非标准日期格式，MySQL 和大多数数据库默认识别的日期格式为`YYYY-MM-DD`，例如`2014-03-08`。可以在 Powershell 中使用以下命令进行替换：
+
+```powershell
+(Get-Content "orders.csv") | 
+ForEach-Object { $_ -replace '(\d{4})/(\d{1,2})/(\d{1,2})', '$1-$2-$3' } |
+Set-Content "orders_fixed.csv"
+```
+然后在 DataGrip 中重新导入 `orders_fixed.csv` 文件即可。
 
 === 查询数据
 
@@ -309,7 +329,7 @@ WHERE
 ==== 查询结果一
 
 #figure(
-  image("fig/查询1.png", width: 50%),
+  image("fig/查询1.png", width: 80%),
   caption: [查询所有供应商的名称、地址、联系电话],
 )
 #block()[
@@ -321,7 +341,7 @@ WHERE
 ==== 查询结果二
 
 #figure(
-  image("fig/查询2.png", width: 50%),
+  image("fig/查询2.png", width: 80%),
   caption: [查询2014年1~10月间的总价大于1000元的订单的编号、顾客编号等订单的所有信息],
 )
 #block()[
@@ -334,7 +354,7 @@ WHERE
 ==== 查询结果三
 
 #figure(
-  image("fig/查询3.png", width: 50%),
+  image("fig/查询3.png", width: 80%),
   caption: [统计每个顾客的订购金额],
 )
 #block()[
@@ -347,7 +367,7 @@ WHERE
 ==== 查询结果四
 
 #figure(
-  image("fig/查询4.png", width: 50%),
+  image("fig/查询4.png", width: 80%),
   caption: [查询订单平均金额超过1000元的顾客编号及其姓名],
 )
 #block()[
@@ -360,7 +380,7 @@ WHERE
 ==== 查询结果五
 
 #figure(
-  image("fig/查询5.png", width: 50%),
+  image("fig/查询5.png", width: 80%),
   caption: [查询与“金仓集团”在同一个国家的供应商编号、名称和地址信息],
 )
 #block()[
@@ -373,7 +393,7 @@ WHERE
 ==== 查询结果六
 
 #figure(
-  image("fig/查询6.png", width: 50%),
+  image("fig/查询6.png", width: 80%),
   caption: [查询供应价格大于零售价格的零件名、制造商名、零售价格和供应价格],
 )
 #block()[
@@ -386,7 +406,7 @@ WHERE
 ==== 查询结果七
 
 #figure(
-  image("fig/查询7.png", width: 50%),
+  image("fig/查询7.png", width: 80%),
   caption: [查询顾客“阿波罗”订购的订单编号、总价及其订购的零件编号、数量和零售价格],
 )
 #block()[

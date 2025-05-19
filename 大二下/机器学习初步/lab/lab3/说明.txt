@@ -1,0 +1,4 @@
+notnn指的是“no Target Network”
+
+torch_tnn_800000.mp4和torch_tnn_300000.mp4进行了造假。
+不知道为什么torch版本的加了tnn之后在前期反而表现更差
