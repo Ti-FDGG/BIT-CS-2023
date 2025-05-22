@@ -243,6 +243,8 @@ USE TPCH;
 ```sql
 -- create_table.sql
 
+-- create_table.sql
+
 -- 地区表
 CREATE TABLE Region (
     region_id INT PRIMARY KEY, -- 地区编号，作为主键
@@ -279,15 +281,15 @@ CREATE TABLE Part (
     part_name VARCHAR(150), -- 零件名称
     mfgr VARCHAR(50), -- 制造商
     size VARCHAR(50), -- 零件尺寸，可以为NULL。注意数据集中的尺寸属性大部分无法用INT类型存储，只能用VARCHAR类型
-    retail_price DECIMAL(10, 2) -- 零售价格
+    retail_price DECIMAL(10, 2) CHECK (retail_price > 0), -- 零件零售价，大于0
 );
 
 -- 零件供应联系表
 CREATE TABLE PartSupp (
     part_id INT, -- 零件编号
     supplier_id INT, -- 供应商编号
-    avail_qty INT, -- 可用数量
-    supply_price DECIMAL(10, 2), -- 供应价格
+    avail_qty INT CHECK (avail_qty > 0), -- 可用数量，大于0
+    supply_price DECIMAL(10, 2) CHECK (supply_price > 0), -- 供应价格，大于0
 
     -- 联合主键，包含零件编号和供应商编号
     PRIMARY KEY (part_id, supplier_id),
@@ -312,7 +314,7 @@ CREATE TABLE Orders (
     order_id INT PRIMARY KEY, -- 订单编号，作为主键
     customer_id INT, -- 顾客编号
     order_date DATE, -- 订单日期
-    total_amount DECIMAL(10, 2), -- 订单总金额
+    total_amount DECIMAL(10, 2) CHECK (total_amount > 0), -- 订单总金额，大于0
 
     -- 外键约束，引用顾客表的顾客编号
     FOREIGN KEY (customer_id) REFERENCES Customer(customer_id)
@@ -323,7 +325,7 @@ CREATE TABLE Lineitem (
     order_id INT, -- 订单编号
     part_id INT, -- 零件编号
     supplier_id INT, -- 供应商编号
-    quantity INT, -- 数量
+    quantity INT CHECK (quantity > 0), -- 数量，大于0
     return_flag CHAR(1), -- 退货标记（Y/N）
     discount DECIMAL(5, 2) CHECK (discount >= 0.00 AND discount <= 1.00), -- 折扣（0.00到1.00之间）
 
