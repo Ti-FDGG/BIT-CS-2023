@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Thu May 22 20:11:56 2025
+# Process ID: 25432
+# Current directory: C:/Users/Timothy/Desktop/lab3
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16732 C:\Users\Timothy\Desktop\lab3\lab3.xpr
+# Log file: C:/Users/Timothy/Desktop/lab3/vivado.log
+# Journal file: C:/Users/Timothy/Desktop/lab3\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Timothy/Desktop/lab3/lab3.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+launch_simulation
+source zero_sequence_detector_tb.tcl

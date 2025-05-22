@@ -1,0 +1,23 @@
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+--- Starting Simulation ---
+Time=20000, State=001, rst=0, I=0, O=0
+Time=25000, State=011, rst=0, I=0, O=0
+Time=35000, State=010, rst=0, I=0, O=0
+Time=45000, State=100, rst=0, I=0, O=1
+Time=70000, State=100, rst=0, I=1, O=0
+Time=75000, State=000, rst=0, I=1, O=0
+Time=80000, State=000, rst=0, I=0, O=0
+Time=85000, State=001, rst=0, I=0, O=0
+Time=95000, State=011, rst=0, I=0, O=0
+Time=100000, State=011, rst=0, I=1, O=0
+Time=105000, State=000, rst=0, I=1, O=0
+Time=110000, State=000, rst=0, I=0, O=0
+Time=115000, State=001, rst=0, I=0, O=0
+Time=125000, State=011, rst=0, I=0, O=0
+Time=135000, State=010, rst=0, I=0, O=0
+Time=145000, State=100, rst=0, I=0, O=1
+Time=160000, State=100, rst=0, I=1, O=0
+Time=165000, State=000, rst=0, I=1, O=0
+--- Ending Simulation ---
+$finish called at time : 210 ns : File "C:/Users/Timothy/Desktop/lab3/lab3.srcs/sim_1/new/testbench.v" Line 80
