@@ -1,0 +1,105 @@
+# 自定义忽略规则
+概率论与数理统计.pdf
+*.mp4
+pretrained_model/
+pretrained_model_addTargetNetwork/
+saved_networks/
+saved_networks_addTargetNetwork/
+*.tar.gz
+*.zip
+*.rar
+*.7z
+TODO.txt
+
+# 忽略大文件
+*.pdf
+
+# 忽略视频文件
+*.avi
+*.mov
+*.wmv
+*.flv
+*.mkv
+
+# 忽略模型文件
+*.h5
+*.pkl
+*.pt
+*.pth
+*.onnx
+*.tflite
+*.pb
+*.weights
+*.bin
+
+# 忽略压缩包
+*.bz2
+*.xz
+*.gz
+*.tar
+
+# 忽略图片文件
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.webp
+*.svg
+*.ico
+*.psd
+*.ai
+*.eps
+
+# 忽略音频文件
+*.mp3
+*.wav
+*.ogg
+*.flac
+*.m4a
+*.aac
+
+# 忽略数据库文件
+*.db
+*.sqlite
+*.sqlite3
+*.mdb
+*.accdb
+
+# 忽略日志文件
+*.log
+logs/
+log/
+
+# 忽略缓存文件
+.cache/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.dylib
+*.dll
+
+# 忽略环境文件
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# 忽略IDE配置
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# 忽略临时文件
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db 
