@@ -36,7 +36,7 @@ CREATE TABLE Part (
     part_name VARCHAR(150), -- 零件名称
     mfgr VARCHAR(50), -- 制造商
     size VARCHAR(50), -- 零件尺寸，可以为NULL。注意数据集中的尺寸属性大部分无法用INT类型存储，只能用VARCHAR类型
-    retail_price DECIMAL(10, 2) CHECK (retail_price > 0), -- 零件零售价，大于0
+    retail_price DECIMAL(10, 2) CHECK (retail_price > 0) -- 零件零售价，大于0
 );
 
 -- 零件供应联系表

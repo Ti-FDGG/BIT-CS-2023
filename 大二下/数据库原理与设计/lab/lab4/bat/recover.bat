@@ -1,0 +1,1 @@
+mysql -u root -p --default-character-set=utf8 TPCH_RECOVER < E:\MySQL_Backup\tpch_backup.sql

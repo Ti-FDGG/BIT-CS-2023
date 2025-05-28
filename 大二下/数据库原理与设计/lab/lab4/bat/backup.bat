@@ -1,0 +1,1 @@
+mysqldump -u root -p --default-character-set=utf8 TPCH > E:\MySQL_Backup\tpch_backup.sql
