@@ -1,5 +1,5 @@
 #import "template-dllab.typ": report-body
-#import "@preview/fletcher:0.5.7" as fletcher: diagram, node, edge
+#import "@preview/fletcher:0.5.7": diagram, node, edge
 #import "@preview/k-mapper:1.2.0": *
 
 #show: doc => report-body(

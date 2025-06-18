@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project source="3.9.0" version="1.0">
+  This file is intended to be loaded by Logisim-evolution v3.9.0(https://github.com/logisim-evolution/).
+
+  <lib desc="#Wiring" name="0">
+    <tool name="Pin">
+      <a name="appearance" val="classic"/>
+    </tool>
+  </lib>
+  <lib desc="#Gates" name="1"/>
+  <lib desc="#Plexers" name="2"/>
+  <lib desc="#Arithmetic" name="3"/>
+  <lib desc="#Memory" name="4"/>
+  <lib desc="#I/O" name="5"/>
+  <lib desc="#Base" name="6">
+    <tool name="Text Tool">
+      <a name="font" val="SansSerif plain 12"/>
+    </tool>
+  </lib>
+  <main name="top_stopwatch"/>
+  <options>
+    <a name="gateUndefined" val="ignore"/>
+    <a name="simlimit" val="1000"/>
+    <a name="simrand" val="0"/>
+  </options>
+  <mappings>
+    <tool lib="6" map="Button2" name="Menu Tool"/>
+    <tool lib="6" map="Button3" name="Menu Tool"/>
+    <tool lib="6" map="Ctrl Button1" name="Menu Tool"/>
+  </mappings>
+  <toolbar>
+    <tool lib="6" name="Poke Tool"/>
+    <tool lib="6" name="Edit Tool"/>
+    <tool lib="6" name="Text Tool">
+      <a name="font" val="SansSerif plain 12"/>
+    </tool>
+    <sep/>
+    <tool lib="0" name="Pin"/>
+    <tool lib="0" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </tool>
+    <tool lib="1" name="NOT Gate"/>
+    <tool lib="1" name="AND Gate"/>
+    <tool lib="1" name="OR Gate"/>
+  </toolbar>
+  <circuit name="top_stopwatch">
+    <a name="circuit" val="top_stopwatch"/>
+    <a name="clabelfont" val="SansSerif plain 11"/>
+    <a name="clabelup" val="south"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(1590,370)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="seg_pins_6_0"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(1590,400)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="an_pins_3_0"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(1590,430)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="led_minute_pin"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(1590,460)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="led_alarm_pin"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(160,130)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="sys_clk_pin"/>
+    </comp>
+    <comp lib="0" loc="(160,350)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="key_a_pin"/>
+    </comp>
+    <comp lib="0" loc="(160,580)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="key_b_pin"/>
+    </comp>
+    <comp lib="0" loc="(160,70)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="reset_n_pin"/>
+    </comp>
+    <comp lib="0" loc="(160,810)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="key_c_pin"/>
+    </comp>
+    <comp lib="1" loc="(210,70)" name="NOT Gate"/>
+    <comp loc="(1090,380)" name="clk_divider_counter"/>
+    <comp loc="(1480,370)" name="display_driver"/>
+    <comp loc="(470,290)" name="button_interface_debounce">
+      <a name="label" val="button_interface_debounce_a"/>
+    </comp>
+    <comp loc="(470,520)" name="button_interface_debounce">
+      <a name="label" val="button_interface_debounce_b"/>
+    </comp>
+    <comp loc="(470,750)" name="button_interface_debounce">
+      <a name="label" val="button_interface_debounce_c"/>
+    </comp>
+    <comp loc="(760,470)" name="state_controller"/>
+    <wire from="(1040,70)" to="(1040,360)"/>
+    <wire from="(1040,70)" to="(1430,70)"/>
+    <wire from="(1090,380)" to="(1380,380)"/>
+    <wire from="(1090,400)" to="(1380,400)"/>
+    <wire from="(1090,420)" to="(1380,420)"/>
+    <wire from="(1090,440)" to="(1380,440)"/>
+    <wire from="(1090,470)" to="(1380,470)"/>
+    <wire from="(1090,500)" to="(1220,500)"/>
+    <wire from="(1090,520)" to="(1380,520)"/>
+    <wire from="(1090,540)" to="(1380,540)"/>
+    <wire from="(1220,500)" to="(1220,650)"/>
+    <wire from="(1240,500)" to="(1240,580)"/>
+    <wire from="(1240,500)" to="(1380,500)"/>
+    <wire from="(1310,130)" to="(1310,350)"/>
+    <wire from="(1310,350)" to="(1380,350)"/>
+    <wire from="(1380,520)" to="(1380,530)"/>
+    <wire from="(1430,70)" to="(1430,330)"/>
+    <wire from="(1480,370)" to="(1590,370)"/>
+    <wire from="(1480,400)" to="(1590,400)"/>
+    <wire from="(1480,430)" to="(1590,430)"/>
+    <wire from="(1480,460)" to="(1590,460)"/>
+    <wire from="(160,130)" to="(320,130)"/>
+    <wire from="(160,350)" to="(370,350)"/>
+    <wire from="(160,580)" to="(370,580)"/>
+    <wire from="(160,70)" to="(180,70)"/>
+    <wire from="(160,810)" to="(370,810)"/>
+    <wire from="(210,70)" to="(260,70)"/>
+    <wire from="(260,690)" to="(420,690)"/>
+    <wire from="(260,70)" to="(260,690)"/>
+    <wire from="(260,70)" to="(290,70)"/>
+    <wire from="(290,460)" to="(420,460)"/>
+    <wire from="(290,70)" to="(290,460)"/>
+    <wire from="(290,70)" to="(420,70)"/>
+    <wire from="(320,130)" to="(320,750)"/>
+    <wire from="(320,130)" to="(340,130)"/>
+    <wire from="(320,750)" to="(370,750)"/>
+    <wire from="(340,130)" to="(340,520)"/>
+    <wire from="(340,130)" to="(360,130)"/>
+    <wire from="(340,520)" to="(370,520)"/>
+    <wire from="(360,130)" to="(360,290)"/>
+    <wire from="(360,130)" to="(600,130)"/>
+    <wire from="(360,290)" to="(370,290)"/>
+    <wire from="(420,460)" to="(420,490)"/>
+    <wire from="(420,690)" to="(420,710)"/>
+    <wire from="(420,70)" to="(420,260)"/>
+    <wire from="(420,70)" to="(710,70)"/>
+    <wire from="(470,290)" to="(570,290)"/>
+    <wire from="(470,520)" to="(660,520)"/>
+    <wire from="(470,750)" to="(570,750)"/>
+    <wire from="(570,290)" to="(570,500)"/>
+    <wire from="(570,500)" to="(660,500)"/>
+    <wire from="(570,540)" to="(570,750)"/>
+    <wire from="(570,540)" to="(660,540)"/>
+    <wire from="(600,130)" to="(600,470)"/>
+    <wire from="(600,130)" to="(960,130)"/>
+    <wire from="(600,470)" to="(660,470)"/>
+    <wire from="(610,580)" to="(610,650)"/>
+    <wire from="(610,580)" to="(660,580)"/>
+    <wire from="(610,650)" to="(1220,650)"/>
+    <wire from="(710,70)" to="(1040,70)"/>
+    <wire from="(710,70)" to="(710,440)"/>
+    <wire from="(760,470)" to="(990,470)"/>
+    <wire from="(760,490)" to="(990,490)"/>
+    <wire from="(760,580)" to="(1240,580)"/>
+    <wire from="(960,130)" to="(1310,130)"/>
+    <wire from="(960,130)" to="(960,390)"/>
+    <wire from="(960,390)" to="(990,390)"/>
+  </circuit>
+  <circuit name="button_interface_debounce">
+    <a name="appearance" val="custom"/>
+    <a name="circuit" val="button_interface_debounce"/>
+    <a name="clabelfont" val="SansSerif plain 11"/>
+    <a name="clabelup" val="north"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <appear>
+      <rect fill="none" height="143" stroke="#000000" stroke-width="2" width="94" x="361" y="371"/>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="339" y="396">clk</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="413" y="393">reset_n</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="319" y="455">key_raw_in</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="506" y="395">key_pulse_out</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="14" text-anchor="middle" x="406" y="529">button_interface_debounce</text>
+      <path d="M399,372 Q410,390 421,372" fill="none" stroke="#000000"/>
+      <circ-anchor facing="east" x="460" y="400"/>
+      <circ-port dir="in" pin="220,280" x="360" y="400"/>
+      <circ-port dir="in" pin="220,330" x="410" y="370"/>
+      <circ-port dir="in" pin="220,380" x="360" y="460"/>
+      <circ-port dir="out" pin="450,330" x="460" y="400"/>
+    </appear>
+    <comp lib="0" loc="(220,280)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="clk"/>
+    </comp>
+    <comp lib="0" loc="(220,330)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="reset_n"/>
+    </comp>
+    <comp lib="0" loc="(220,380)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="key_raw_in"/>
+    </comp>
+    <comp lib="0" loc="(450,330)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="key_pulse_out"/>
+      <a name="output" val="true"/>
+    </comp>
+  </circuit>
+  <circuit name="clk_divider_counter">
+    <a name="appearance" val="custom"/>
+    <a name="circuit" val="clk_divider_counter"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <a name="clabelup" val="north"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <appear>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="415" y="132">reset_n</text>
+      <rect fill="none" height="191" stroke="#000000" stroke-width="2" width="94" x="361" y="110"/>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="346" y="135">clk</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="14" text-anchor="middle" x="411" y="317">clk_divider_counter</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="320" y="213">timer_run_en</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="308" y="233">timer_reset_cmd</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="491" y="213">min_out</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="523" y="245">max_time_reached</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="517" y="268">scan_clk_enable</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="516" y="288">blink_clk_enable</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="530" y="127">ms_bcd_tens_out[3:0]</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="532" y="147">ms_bcd_ones_out[3:0]</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="532" y="167">sec_bcd_tens_out[3:0]</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="534" y="188">sec_bcd_ones_out[3:0]</text>
+      <path d="M399,111 Q410,129 421,111" fill="none" stroke="#000000"/>
+      <circ-anchor facing="east" x="460" y="130"/>
+      <circ-port dir="in" pin="290,310" x="360" y="140"/>
+      <circ-port dir="in" pin="290,360" x="410" y="110"/>
+      <circ-port dir="in" pin="290,410" x="360" y="220"/>
+      <circ-port dir="in" pin="290,470" x="360" y="240"/>
+      <circ-port dir="out" pin="480,270" x="460" y="130"/>
+      <circ-port dir="out" pin="480,320" x="460" y="150"/>
+      <circ-port dir="out" pin="480,380" x="460" y="170"/>
+      <circ-port dir="out" pin="480,410" x="460" y="190"/>
+      <circ-port dir="out" pin="480,440" x="460" y="220"/>
+      <circ-port dir="out" pin="480,490" x="460" y="250"/>
+      <circ-port dir="out" pin="480,520" x="460" y="270"/>
+      <circ-port dir="out" pin="480,550" x="460" y="290"/>
+    </appear>
+    <comp lib="0" loc="(290,310)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="clk"/>
+    </comp>
+    <comp lib="0" loc="(290,360)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="reset_n"/>
+    </comp>
+    <comp lib="0" loc="(290,410)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="timer_run_en"/>
+    </comp>
+    <comp lib="0" loc="(290,470)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="timer_reset_cmd"/>
+    </comp>
+    <comp lib="0" loc="(480,270)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="ms_bcd_tens_out_3_0_450e3299"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(480,320)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="ms_bcd_ones_out_3_0_b4a6c656"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(480,380)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="sec_bcd_tens_out_3_0_3d4b871d"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(480,410)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="sec_bcd_ones_out_3_0_70daa37a"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(480,440)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="min_out"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(480,490)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="max_time_reached"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(480,520)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="scan_clk_enable"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(480,550)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="blink_clk_enable"/>
+      <a name="output" val="true"/>
+    </comp>
+  </circuit>
+  <circuit name="display_driver">
+    <a name="appearance" val="custom"/>
+    <a name="circuit" val="display_driver"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <a name="clabelup" val="north"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <appear>
+      <rect fill="none" height="232" stroke="#000000" stroke-width="2" width="95" x="391" y="310"/>
+      <path d="M429,310 Q440,328 451,310" fill="none" stroke="#000000"/>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="444" y="332">reset_n</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="373" y="325">clk</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="324" y="353">ms_bcd_tens_in[3:0]</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="323" y="374">ms_bcd_ones_in[3:0]</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="324" y="393">sec_bcd_tens_in[3:0]</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="322" y="415">sec_bcd_ones_in[3:0]</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="362" y="442">min_in</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="336" y="474">alarm_active_in</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="325" y="495">scan_clk_enable_in</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="326" y="515">blink_clk_enable_in</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="530" y="343">seg_out[6:0]</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="526" y="373">an_out[3:0]</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="540" y="403">led_minute_out</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="537" y="433">led_alarm_out</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="438" y="553">display_driver</text>
+      <circ-anchor facing="east" x="490" y="350"/>
+      <circ-port dir="in" pin="230,250" x="390" y="330"/>
+      <circ-port dir="in" pin="230,290" x="440" y="310"/>
+      <circ-port dir="in" pin="230,330" x="390" y="360"/>
+      <circ-port dir="in" pin="230,370" x="390" y="380"/>
+      <circ-port dir="in" pin="230,410" x="390" y="400"/>
+      <circ-port dir="in" pin="230,450" x="390" y="420"/>
+      <circ-port dir="in" pin="230,490" x="390" y="450"/>
+      <circ-port dir="in" pin="230,530" x="390" y="480"/>
+      <circ-port dir="in" pin="230,570" x="390" y="500"/>
+      <circ-port dir="in" pin="230,610" x="390" y="520"/>
+      <circ-port dir="out" pin="460,290" x="490" y="350"/>
+      <circ-port dir="out" pin="460,330" x="490" y="380"/>
+      <circ-port dir="out" pin="460,370" x="490" y="410"/>
+      <circ-port dir="out" pin="460,410" x="490" y="440"/>
+    </appear>
+    <comp lib="0" loc="(230,250)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="clk"/>
+    </comp>
+    <comp lib="0" loc="(230,290)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="reset_n"/>
+    </comp>
+    <comp lib="0" loc="(230,330)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="ms_bcd_tens_in"/>
+    </comp>
+    <comp lib="0" loc="(230,370)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="ms_bcd_ones_in"/>
+    </comp>
+    <comp lib="0" loc="(230,410)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="sec_bcd_tens_in"/>
+    </comp>
+    <comp lib="0" loc="(230,450)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="sec_bcd_ones_in"/>
+    </comp>
+    <comp lib="0" loc="(230,490)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="min_in"/>
+    </comp>
+    <comp lib="0" loc="(230,530)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="alarm_active_in"/>
+    </comp>
+    <comp lib="0" loc="(230,570)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="scan_clk_enable_in"/>
+    </comp>
+    <comp lib="0" loc="(230,610)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="blink_clk_enable_in"/>
+    </comp>
+    <comp lib="0" loc="(460,290)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="seg_out_6_0_f79ae683"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(460,330)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="an_out_3_0_17c24b36"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(460,370)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="led_minute_out"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(460,410)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="led_alarm_out"/>
+      <a name="output" val="true"/>
+    </comp>
+  </circuit>
+  <circuit name="state_controller">
+    <a name="appearance" val="custom"/>
+    <a name="circuit" val="state_controller"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <a name="clabelup" val="north"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <appear>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="444" y="332">reset_n</text>
+      <rect fill="none" height="160" stroke="#000000" stroke-width="2" width="94" x="391" y="310"/>
+      <path d="M429,310 Q440,328 451,310" fill="none" stroke="#000000"/>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="377" y="333">clk</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="349" y="366">key_a_pulse</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="348" y="385">key_b_pulse</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="347" y="405">key_c_pulse</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="323" y="440">max_time_reached_in</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="548" y="334">timer_run_en_out</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="558" y="354">timer_reset_cmd_out</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="545" y="440">alarm_active_out</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="440" y="479">state_controller</text>
+      <circ-anchor facing="east" x="490" y="340"/>
+      <circ-port dir="in" pin="230,220" x="390" y="340"/>
+      <circ-port dir="in" pin="230,270" x="440" y="310"/>
+      <circ-port dir="in" pin="230,320" x="390" y="370"/>
+      <circ-port dir="in" pin="230,370" x="390" y="390"/>
+      <circ-port dir="in" pin="230,420" x="390" y="410"/>
+      <circ-port dir="in" pin="230,470" x="390" y="450"/>
+      <circ-port dir="out" pin="440,220" x="490" y="340"/>
+      <circ-port dir="out" pin="440,280" x="490" y="360"/>
+      <circ-port dir="out" pin="440,340" x="490" y="450"/>
+    </appear>
+    <comp lib="0" loc="(230,220)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="clk"/>
+    </comp>
+    <comp lib="0" loc="(230,270)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="reset_n"/>
+    </comp>
+    <comp lib="0" loc="(230,320)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="key_a_pulse"/>
+    </comp>
+    <comp lib="0" loc="(230,370)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="key_b_pulse"/>
+    </comp>
+    <comp lib="0" loc="(230,420)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="key_c_pulse"/>
+    </comp>
+    <comp lib="0" loc="(230,470)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="max_time_reached_in"/>
+    </comp>
+    <comp lib="0" loc="(440,220)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="timer_run_en_out"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(440,280)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="timer_reset_cmd_out"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(440,340)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="alarm_active_out"/>
+      <a name="output" val="true"/>
+    </comp>
+  </circuit>
+</project>

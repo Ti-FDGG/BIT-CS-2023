@@ -1,0 +1,3 @@
+这里仅仅是我完成的部分（实际上电路设计也是由左逸龙完成的）
+
+详见https://github.com/laonuo2004/Logic_and_Computer_Design_Exp.4
