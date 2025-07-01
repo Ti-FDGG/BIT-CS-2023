@@ -1,0 +1,257 @@
+% LaTeX code starts here
+% This document reconstructs a 3-page test paper from provided images.
+
+\documentclass{ctexart} % 使用 ctexart 文档类以支持中文
+
+\usepackage[a4paper, margin=1in]{geometry} % 设置页面尺寸和边距
+\usepackage{enumitem} % 用于自定义列表环境
+\usepackage{array} % 用于增强 tabular 环境的功能
+\usepackage{amsmath} % 用于数学公式
+\usepackage{ragged2e} % 用于对齐控制
+\usepackage{titlesec} % 用于自定义章节标题样式
+
+\begin{document}
+
+% --- Page 1 ---
+\pagestyle{plain} % Use plain page style for page numbers
+
+% Header - Based on the content, this seems to be the start of a new test or major section, not directly connected to the previous 5-page test in terms of numbering/structure.
+% The partial line at the top indicates the end of a previous text block, likely a sentence.
+% \raggedright % Align left - Keeping this section left-aligned as per image style
+% ...谓关系设计中, 需要将一个 m:n 联系转换为一个关系模式。
+% \vspace{1em} % Add some space after the potential partial line if included.
+
+% Section One: Single Choice Questions
+\raggedright % Align left
+\textbf{\large 一、 单项选择题 (在每小题的四个备选答案中选出一个正确答案。本题共 16 分, 每小题 1 分)} % Section Title
+\vspace{1em}
+
+\begin{enumerate}[label=\arabic*.] % Use arabic numbers followed by a dot
+    \item 在数据库中, 下列说法 ( ) 是不正确的。
+    \begin{flushleft} % Align options to the left
+    A. 数据库中有数据冗余 \hspace{2cm} B. 数据库有较高的数据独立性 \\
+    C. 数据库能为各种用户共享 \hspace{2cm} D. 数据库加强了数据保护
+    \end{flushleft}
+    \item 按照传统的数据库模型分类, 数据库系统可以分为 ( ) 三种类型。
+    \begin{flushleft}
+    A. 大型、中型和小型 \hspace{2cm} B. 西文、中文和兼容 \\
+    C. 层次、网状和关系 \hspace{2cm} D. 数据、图形和多媒体
+    \end{flushleft}
+    \item 在数据库的三级模式结构中, ( ) 是用户与数据库系统的接口, 是用户用到的那部分数据的描述。
+    \begin{flushleft}
+    A. 外模式 \hspace{2cm} B. 内模式 \hspace{2cm} C. 存储模式 \hspace{2cm} D. 模式
+    \end{flushleft}
+    \item 下面选项中不是关系的基本特征的是 ( )。
+    \begin{flushleft}
+    A. 不同的列应有不同的数据类型 \hspace{2cm} B. 不同的列应有不同的列名 \\
+    C. 没有行序和列序 \hspace{2cm} D. 没有重复元组
+    \end{flushleft}
+    \item SQL 语言具有两种使用方式, 分别称为交互式 SQL 和 ( )。
+    \begin{flushleft}
+    A. 提示式 SQL \hspace{2cm} B. 多用户 SQL \hspace{2cm} C. 嵌入式 SQL \hspace{2cm} D. 解释式 SQL
+    \end{flushleft}
+    \item 设关系模式 R(ABCD), F 是 R 上成立的 FD 集, F=\{A$\rightarrow$B, B$\rightarrow$C\}, 则 (BD)$^+$ 为 ( )。
+    \begin{flushleft}
+    A. BCD \hspace{2cm} B. BC \hspace{2cm} C. ABC \hspace{2cm} D. C
+    \end{flushleft}
+    \item E-R 图是数据库设计的工具之一, 它适用于建立数据库的 ( )。
+    \begin{flushleft}
+    A. 概念模型 \hspace{2cm} B. 逻辑模型 \hspace{2cm} C. 结构模型 \hspace{2cm} D. 物理模型
+    \end{flushleft}
+    \item 若关系模式 R(ABCD) 已属于 3NF, 下列说法中 ( ) 是正确的。 % Note: Question text "但 R 属于 2NF" is very unusual, transcribing as seen.
+    \begin{flushleft}
+    A. 它一定消除了插入和删除异常 \hspace{2cm} B. 仍存在一定的插入和删除异常 \\
+    C. 一定属于 BCNF \hspace{2cm} D. A 和 C 都是
+    \end{flushleft}
+    \item 解决并发操作带来的数据不一致性普遍采用 ( )。
+    \begin{flushleft}
+    A. 封锁技术 \hspace{2cm} B. 恢复技术 \hspace{2cm} C. 存取控制技术 \hspace{2cm} D. 协调
+    \end{flushleft}
+    \item 数据库管理系统通常提供授权功能来控制不同用户访问数据的权限, 这主要是为了实现数据库的 ( )。
+    \begin{flushleft}
+    A. 可靠性 \hspace{2cm} B. 一致性 \hspace{2cm} C. 完整性 \hspace{2cm} D. 安全性
+    \end{flushleft}
+    \item 一个事务一旦完成全部操作后, 它对数据库的所有更新都永久地反映在数据库中, 不会丢失, 这是指事务的 ( )。
+    \begin{flushleft}
+    A. 原子性 \hspace{2cm} B. 一致性 \hspace{2cm} C. 隔离性 \hspace{2cm} D. 持久性
+    \end{flushleft}
+    \item 在数据库中, 软件错误属于 ( )。
+    \begin{flushleft}
+    A. 事务故障 \hspace{2cm} B. 系统故障 \hspace{2cm} C. 介质故障 \hspace{2cm} D. 活锁
+    \end{flushleft}
+    \item 在通常情况下, 下面的关系中不可以作为关系数据库的系是 ( )。 % Typo "系" should be "模式"? Transcribing as seen.
+    \begin{flushleft}
+    A. R1(学生号, 学生名, 性别) \hspace{2cm} B. R2(学生号, 学生名, 班级号) \\
+    C. R3(学生号, 学生名, 宿舍号) \hspace{2cm} D. R4(学生号, 学生名, 简历)
+    \end{flushleft}
+    \item 有 12 个实体类型, 并且它们之间存在着 15 个不同的二元联系, 其中 4 个是 1:1 联系类型, 5 个是 1:N 联系类型, 6 个 M:N 联系类型, 那么根据转换规则, 这个 ER 结构转换成的关系模式有 ( )。
+    \begin{flushleft}
+    A. 17 个 \hspace{2cm} B. 18 个 \hspace{2cm} C. 23 个 \hspace{2cm} D. 27 个
+    \end{flushleft}
+    \item 数据库中存放三级模式结构定义的是 ( )。
+    \begin{flushleft}
+    A. DBS \hspace{2cm} B. DB \hspace{2cm} C. DD \hspace{2cm} D. DFD
+    \end{flushleft}
+    \item DBMS 通过 ( ) 来保证数据库中的数据是正确的, 避免非法的不符合语义的数据的输入和输出。
+    \begin{flushleft}
+    A. 完整性检查 \hspace{2cm} B. 安全性检查 \hspace{2cm} C. 语法检查 \hspace{2cm} D. 合法检查
+    \end{flushleft}
+\end{enumerate}
+
+% Page 1 Footer - Not visible in the image, assuming none or just a page number. Based on Page 2 footer, this is Page 1 of 3.
+\vfill
+\centering
+第 1 页, 共 3 页
+
+\clearpage % End of Page 1
+
+% --- Page 2 ---
+\pagestyle{plain}
+
+% Section Two: Fill-in-the-blanks
+\raggedright
+\textbf{\large 二、 填空题 (本题共 10 分, 每题各 1 分)}
+\vspace{1em}
+
+\begin{enumerate}[label=\arabic*.]
+    \item \underline{\hspace{4cm}}是位于用户和操作系统之间的一层数据管理软件, 它为用户或应用程序提供访问 DB 的方法。
+    \item \underline{\hspace{4cm}}表示对加工处理过的数据的输入或输出数据。
+    \item DBS 运行的最小逻辑工作单元是\underline{\hspace{4cm}}。
+    \item 系统能把数据库从被破坏、不正确的状态, 恢复到最近一个正确的状态, DBMS 的这种能力称为\underline{\hspace{4cm}}。
+    \item 数据库的并发操作会带来三个问题: 丢失更新, 读取脏数据, 以及\underline{\hspace{4cm}}。
+    \item 如果关系模式 R 是 1NF, 且每个属性都不传递依赖于 R 的候选键, 则称 R 是\underline{\hspace{4cm}}的模式。
+    \item 关系模型的实体完整性是指\underline{\hspace{4cm}}。
+    \item 外模式/模式映象是数据库提供了\underline{\hspace{4cm}}数据独立性。
+    \item 设计全局 ER 模式时需要消除的冲突有: 属性冲突、命名冲突和\underline{\hspace{4cm}}。
+    \item 需求说明书的主要内容是\underline{\hspace{4cm}}和数据字典。
+\end{enumerate}
+
+\vspace{2em}
+
+% Section Three: Short Answer Questions
+\raggedright
+\textbf{\large 三、 简答题 (本题共 16 分, 每小题 4 分)}
+\vspace{1em}
+
+\begin{enumerate}[label=\arabic*.]
+    \item 简述封锁技术中常用的两种锁。
+    \item SQL 的数据更新包括哪三种操作？分别用什么语句实现？
+    \item 简述采用 ER 方法的数据库概念设计过程。
+    \item 简述关系数据库中的几种关键字。
+\end{enumerate}
+
+\vspace{2em}
+
+% Section Four: Calculation Question
+\raggedright
+\textbf{\large 四、 计算题 (本题共 14 分, 每小题 7 分)}
+\vspace{1em}
+
+\begin{enumerate}[label=\arabic*.]
+    \item 设关系模式 R(ABCD), R 分解成 $\rho$={\{AB\}, \{ACD\}, \{BCD\}}。如果 R 上成立的函数依赖集 F=\{A$\rightarrow$C, D$\rightarrow$C, BD$\rightarrow$A\}, 那么 $\rho$ 相对于 F 是否无损分解？是否保持函数依赖？
+    \item 设有两个关系如下图所示, 试计算:
+    \begin{enumerate}[label=(\arabic*)]
+        \item (1) R$\times$S
+        \item (2) R$\bowtie_{C=S.C}$S
+    \end{enumerate}
+    % Table for R
+    \vspace{1em} % Add space before tables
+    \centering
+    \begin{tabular}{|c|c|c|}
+    \hline
+    R & B & C \\
+    \hline
+    2 & b & 2 \\
+    a & d & 8 \\
+    5 & 5 & \\ % Blank entry
+    \hline
+    \end{tabular}
+    \hspace{2em} % Horizontal space between tables
+    % Table for S
+    \begin{tabular}{|c|c|c|}
+    \hline
+    S & C & D \\
+    \hline
+    2 & 6 & \\ % Blank entry
+    d & a &  \\ % Blank entry
+    7 & c &  \\ % Blank entry
+    \hline
+    \end{tabular}
+\end{enumerate}
+
+% Page 2 Footer
+\vfill
+\centering
+第 2 页, 共 3 页
+
+\clearpage % End of Page 2
+
+% --- Page 3 ---
+\pagestyle{plain}
+
+% Section Five: Query Design
+\raggedright
+\textbf{\large 五、 查询设计题 (本题共 24 分, 每小题 3 分)} % 8 questions * 3 points = 24 points
+\vspace{1em}
+
+设有如下关系模式:
+
+学生关系: S (SNO (学号), SNAME (姓名), SEX (性别), SDEPT (系别), PROV (省区))
+
+选课关系: SC (SNO (学号), CNO (课程号), G (成绩))
+
+课程关系: C (CNO (课程号), CNAME (课程名), CDEPT (开课系列), TNAME (教师名))
+
+\textbf{请用关系代数表达式写出 (1) -- (3)}: % Instruction for first set of questions
+\begin{enumerate}[label=\arabic*.]
+    \item 查询来自北京的学生的姓名和系别
+    \item 查询英语系的学生所选修课程的课程名和成绩
+    \item 查询选修课程包含 Luo 老师所授课程的学生学号
+\end{enumerate}
+
+\textbf{请用 SQL 语言描述 (4) -- (8)}: % Instruction for second set of questions
+\begin{enumerate}[label=\arabic*., resume] % Continue numbering from 3
+    \item 查询计算机系男同学的学号、姓名和省区
+    \item 查询与 ZHANG 同学来自同一省区的学生的学号、姓名和系别
+    \item 建立物联网系的学生的视图 (IoT\_S)
+    \item 查询选修课程 C 语言的学生的学号和姓名
+    \item 查询每名学生的学号和平均成绩, 查询结果按照平均成绩降序排列, 平均成绩相同时按照学号升序排列。
+\end{enumerate}
+
+\vspace{2em}
+
+% Section Six: Database Design Question
+\raggedright
+\textbf{\large 六、 数据库设计题 (本题共 20 分, 每小题 10 分)} % 2 questions * 10 points = 20 points
+\vspace{1em}
+
+\begin{enumerate}[label=\arabic*.]
+    \item 一个图书馆借阅管理数据库中有三个实体集: 一是“借书人”实体集, 属性有借书证号、姓名、单位; 二是“图书”实体集, 属性有书号、书名、数量、位置; 三是“出版社”实体集, 属性有出版社名、电话、地址、邮编等。
+    “借书人”和“图书”间存在“借阅”联系, 每人可借阅多种图书, 每种图书可由多人借阅, 借阅有介绍书日期和还书日期; “图书”和“出版社”之间存在“出版”联系, 每个出版社可出版多种图书, 同一书名的图书只在一个出版社出版。
+    \begin{enumerate}[label=(\arabic*)]
+        \item 试画出 E-R 图, 并在图上指明属性和连通词。 % Cannot draw, add placeholder
+        % \begin{center}
+        % [Placeholder for E-R Diagram]
+        % \end{center}
+        \item 将 E-R 图转换成关系模型, 并注明主键和外键。
+    \end{enumerate}
+
+    \item 设有关系模式:
+    授课表 (课程号, 课程名, 学分, 授课教师号, 教师名, 授课时数)
+    如果规定: 一门课程有确定的课程名和学分, 每名教师有确定的教师名, 每门课程可以由多名教师讲授, 每名教师也可以讲授多门课程, 每名教师对每门课程有确定的授课时数。
+    回答以下问题:
+    \begin{enumerate}[label=(\arabic*)]
+        \item 根据上述规定写出关系模式 R 的基本 FD 和候选键。
+        \item 关系 R 是否存在局部函数依赖, 若有, 请指出, 并将该关系分解到 2NF。
+        \item 进一步将 R 分解成 3NF 模式。
+    \end{enumerate}
+\end{enumerate}
+
+
+% Page 3 Footer
+\vfill
+\centering
+第 3 页, 共 3 页
+
+\end{document}
+% LaTeX code ends here
